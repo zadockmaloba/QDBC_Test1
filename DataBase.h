@@ -54,13 +54,16 @@ inline bool DataBase::connectDB()
 		qDebug() << "DB opened successfully";
 		qDebug() << asDb.tables();
 		qDebug() << asDb.connectOptions();
-		return false;
+		return true;
 	}
-	return true;
+	else
+	{
+		qDebug() << "Error openning the database";
+	}
+	return false;
 }
 
 inline void DataBase::closeDB()
 {
 	asDb.close();
 }
-

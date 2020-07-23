@@ -11,6 +11,7 @@ class QDBC_Test1 : public QMainWindow
 public:
     QDBC_Test1(QWidget *parent = Q_NULLPTR);
     ~QDBC_Test1();
+    bool execQuery(QString cmd);
 
 private:
     Ui::QDBC_Test1Class ui;
